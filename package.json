@@ -1,0 +1,16 @@
+{
+  "name": "entertainment-rental-project",
+  "version": "1.0.0",
+  "description": "Unified startup for React Client and Express Backend",
+  "scripts": {
+    "postinstall": "npm run install-all",
+    "install-all": "concurrently \"npm install --prefix client\" \"npm install --prefix Backend\"",
+    "start": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix Backend\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix Backend",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
